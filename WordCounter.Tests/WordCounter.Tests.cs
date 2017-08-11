@@ -20,5 +20,17 @@ namespace WordCounter.Tests
             Assert.AreEqual(expected,actual);
         }
 
+        [TestMethod]
+        public void CountRepeats_ReturnTrueIfWordisContainedInSentence_True()
+        {
+            //Arrange
+            RepeatCounter testCounter = new RepeatCounter("This is a test", "test");
+            int expected = 4;
+            //Act
+            int actual = testCounter.CountRepeats();
+            //Assert
+            Assert.AreEqual(expected,actual);
+        }
+
     }
 }
