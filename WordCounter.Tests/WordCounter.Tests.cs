@@ -21,11 +21,24 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void CountRepeats_ReturnAmountOfWordsInSentence_True()
+        public void GetWordCountAll_ReturnAmountOfWordsInSentence_True()
         {
             //Arrange
             RepeatCounter testCounter = new RepeatCounter("This is a test", "test");
             int expected = 4;
+            //Act
+            testCounter.CountRepeats();
+            int actual = testCounter.GetWordCountAll();
+            //Assert
+            Assert.AreEqual(expected,actual);
+        }
+
+        [TestMethod]
+        public void CountRepeats_ReturnsHowManyTimesWordisInSentence_True()
+        {
+            //Arrange
+            RepeatCounter testCounter = new RepeatCounter("This is a test", "test");
+            int expected = 1;
             //Act
             int actual = testCounter.CountRepeats();
             //Assert
