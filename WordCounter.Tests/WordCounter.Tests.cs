@@ -21,7 +21,7 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void CountRepeats_ReturnTrueIfWordisContainedInSentence_True()
+        public void CountRepeats_ReturnAmountOfWordsInSentence_True()
         {
             //Arrange
             RepeatCounter testCounter = new RepeatCounter("This is a test", "test");
