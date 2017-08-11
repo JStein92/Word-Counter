@@ -1,31 +1,27 @@
-## Synopsis
+## Specs
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+___
 
-## Code Example
+1. User inputs a sentence and a word, and the program returns true if the word is contained in the sentence.
+- Input: "This is a test", "test"
+- Output: True
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+        Spec #1's input/output is designed to test the most basic form of a "contains" method - exact matches only in capitalization, with spaces between words as expected
 
-## Motivation
+2. User inputs a sentence, and the program returns how many words are in the sentence.
+ - Input: "This is a test"
+ - Output: 4
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+         Spec #2's input/output is designed to be the simpliest version of a word counter - normal spacing between words and no non-alphanumeric symbols
 
-## Installation
+3. User inputs a sentence and a word, and the program returns how many times the word is contained in the sentence. 
+- Input: "This is a test test", "test"
+- Output: 2
 
-Provide code examples and explanations of how to get the project.
+         Spec #3's input/output once again using normal spacing/capitalization to find the number of occurances input word in the given sentence
 
-## API Reference
+4. User inputs a sentence and a word, and the program returns how many times the word is contained in the sentence, ignoring differences in capitalization and spacing.
+- Input: "This is a programTeST tEst", "teSt"
+- Output: 2
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
+         Spec #4's input/output is designed to account for irregular spacing and capitalization in the input - the inputs will test for each letter ("t, "e" "s", "t") in the given word being an alternative capitalization than in the given sentence. 

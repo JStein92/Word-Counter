@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace ExampleProject.Models
+namespace WordCounter.Models
 {
-    public class Example
+    public class RepeatCounter
     {
         
     }
