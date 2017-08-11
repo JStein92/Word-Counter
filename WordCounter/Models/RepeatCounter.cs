@@ -10,12 +10,20 @@ namespace WordCounter.Models
         private int _wordCount;
         private int _wordCountAll;
 
+        private List<string> _userSentenceList = new List<string>{};
+
         private List<string> _specialCharacters = new List<string>{".", ",","!","?","/", "$", "@", "#", "%", "&", "*", "(", ")", "=", "+", "<", ">","\\"};
 
         public RepeatCounter(string userSentence, string userWord)
         {
             _userSentence = userSentence;
             _userWord = userWord;
+
+            string[] wordArray = _userSentence.Split(' ');
+            foreach (string word in wordArray)
+            {
+                _userSentenceList.Add(word);
+            }
         }
 
         public int GetWordCountAll()
@@ -30,6 +38,10 @@ namespace WordCounter.Models
         public string GetUserSentence()
         {
             return _userSentence;
+        }
+        public List<string> GetUserSentenceList()
+        {
+            return _userSentenceList;
         }
 
         public bool IsWordContained()
@@ -68,7 +80,7 @@ namespace WordCounter.Models
         
                     if (wordNoSpecialChars.ToUpper() == _userWord.ToUpper())
                     {
-                    
+                
                         _wordCount++;
                     }
                 }
