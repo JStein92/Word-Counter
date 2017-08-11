@@ -37,13 +37,26 @@ namespace WordCounter.Tests
         public void CountRepeats_ReturnsHowManyTimesWordisInSentence_True()
         {
             //Arrange
-            RepeatCounter testCounter = new RepeatCounter("This is a test", "test");
+            RepeatCounter testCounter = new RepeatCounter("This is a test test", "test");
+            int expected = 2;
+            //Act
+            int actual = testCounter.CountRepeats();
+            //Assert
+            Assert.AreEqual(expected,actual);
+        }
+
+        [TestMethod]
+        public void CountRepeats_ReturnsHowManyTimesWordisInSentenceAccountingForCapsAndSpecialCharacters_True()
+        {
+            //Arrange
+            RepeatCounter testCounter = new RepeatCounter("This is a programTeST tEst!", "teSt");
             int expected = 1;
             //Act
             int actual = testCounter.CountRepeats();
             //Assert
             Assert.AreEqual(expected,actual);
         }
+
 
     }
 }

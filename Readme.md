@@ -20,8 +20,9 @@ ___
 
          Spec #3's input/output once again using normal spacing/capitalization to find the number of occurances input word in the given sentence
 
-4. User inputs a sentence and a word, and the program returns how many times the word is contained in the sentence, ignoring differences in capitalization and spacing.
-- Input: "This is a programTeST tEst", "teSt"
-- Output: 2
+4. User inputs a sentence and a word, and the program returns how many times the word is contained in the sentence, ignoring differences in capitalization.
 
-         Spec #4's input/output is designed to account for irregular spacing and capitalization in the input - the inputs will test for each letter ("t, "e" "s", "t") in the given word being an alternative capitalization than in the given sentence. 
+- Input: "This is a programTeST tEst!", "teSt"
+- Output: 1
+
+         Spec #4's input/output is designed to account for irregular spacing and capitalization in the input - the inputs will test for each letter ("t, "e" "s", "t") in the given word being an alternative capitalization than in the given sentence. To be clear we do NOT want the word to be found if there is no space, because that could result in false positives, like finding "test" in the sentence "testing"
