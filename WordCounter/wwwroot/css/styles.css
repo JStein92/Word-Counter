@@ -6,5 +6,24 @@ button{
     font-size: 2em;
 }
 body{
+    font-family: 'Noto Sans', sans-serif;
     background-color: #f2f4ff;
+}
+.jumbotron{
+ padding-top: 100px;
+padding-bottom: 100px;
+    background-image: url("/../img/headerbg.png");
+background-size: cover;
+background-position: center; 
+ background-repeat: no-repeat;
+text-align: center;
+}
+.jumbotron h1{
+    font-size: 8em;
+}
+.jumbotron p{
+    font-size: 2em;
+}
+form{
+    font-size: 2em;
 }

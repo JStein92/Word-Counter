@@ -1,31 +1,32 @@
 @{
     Layout = "_Layout";
 }
+
+<div class="jumbotron">
+    <h1 class="display-3">Results</h1>
+    <p class="lead">See results of your search below!</p>
+</div>
+
 <div class="container">
-
-
-
-<div class="jumbotron"><h1>Search Results</h1></div>
-
-<h1> </h1>
-
 
 <div class="panel  panel-info">
     <div class="panel-heading"><h1>"@Model.GetUserWord()" appears @Model.CountRepeats() time(s) in:</h1></div>
     <div class="panel-body">
-        <h2>
-         @foreach(var word in @Model.GetUserSentenceList()) 
-         { 
-            if(@Model.GetUserWord().ToUpper() == word.ToUpper()) 
-            {
-             <span class="word"> @word </span> 
-            } 
-            else 
-            {
-             <span> @word </span> 
-            } 
-        }
-    </h2>
+        <div id="sentenceToType">
+            <h2 id="sentence">
+            @foreach(var word in @Model.GetUserSentenceList()) 
+            { 
+                if(@Model.GetUserWord().ToUpper() == word.ToUpper()) 
+                {
+                    <span class="word"> @word </span> 
+                } 
+                else 
+                {
+                     <span> @word </span> 
+                } 
+            }
+            </h2>
+      </div>
     </div>
 </div>
 
